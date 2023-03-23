@@ -36,11 +36,8 @@ The saved_model.pt file is generated when you save the trained LLM model using t
 l
 Step by step guide on how to run the model from GitHub:
 
-Clone the GitHub repository to your local machine:
-bash
-cc:
-git clone https://github.com/your_username/your_repository.git
-Replace your_username and your_repository with your GitHub username and the repository name.
+Clone the GitHub repository to your local machine: 
+git clone xxx
 
 Change into the repository's directory:
 bash
