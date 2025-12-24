@@ -12,12 +12,7 @@ This project provides a lightweight web application for crawling a website, summ
 ## Requirements
 
 - Python 3.9+
-
-## Setup
-
-```bash
-pip install -r requirements.txt
-```
+- No external dependencies
 
 ## Run the App
 
