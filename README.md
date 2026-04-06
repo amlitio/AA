@@ -64,3 +64,40 @@ python
 cc:
 llm.load_state_dict(torch.load("./saved_model.pt"))
 Now you can use the trained model for making predictions or further fine-tuning.
+
+## Infrastructure pass-likelihood scoring
+
+This repo now includes `scoring.py`, a lightweight implementation of a
+weighted **Pass-Likelihood + Land Relevance** model for infrastructure
+proposals.
+
+### Run the demo
+
+```bash
+python scoring.py
+```
+
+### Run tests
+
+```bash
+python -m unittest test_scoring.py
+```
+
+### Scoring inputs
+
+The model uses these categories:
+
+- procedural stage (0-25)
+- sponsor strength (0-10)
+- funding clarity (0-15)
+- route specificity (0-10)
+- need case / demand pull (0-10)
+- right-of-way tractability (0-10)
+- local-plan alignment (0-8)
+- opposition/environmental drag (0-7, subtracted)
+- land monetization fit (0-19)
+
+Final formula:
+
+`A + B + C + D + E + F + G + I - H`
+
